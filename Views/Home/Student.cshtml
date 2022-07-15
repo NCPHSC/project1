@@ -1,0 +1,41 @@
+﻿
+@model StudentModel
+
+@{
+    ViewData["Title"] = "Student";
+    string myAddress = "Banepa";
+}
+
+<h1>Student</h1>
+
+<p>@myAddress</p>
+@*<p> string myAddress = "Banepa";</p>
+    this is comment*@
+<table>
+    
+    <tr>
+        <th>
+            @Html.DisplayNameFor(x => x.Reg_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Phone)
+        </th>
+    </tr>
+    <tr>
+        @Html.DisplayFor(x => x.Reg_no)
+        <td>
+            @Model.Reg_no
+
+        </td>
+        <td>
+            @Model.Address
+        </td>
+        <td>
+            @Model.Phone
+        </td>
+    </tr>
+
+</table>
